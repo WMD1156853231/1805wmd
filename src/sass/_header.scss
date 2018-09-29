@@ -1,0 +1,318 @@
+@charset "UTF-8";
+$top_left-height:30px;
+$wrapper-width:1200px;
+$bg-f2f2f2:#f2f2f2;
+$color-666:#666;
+*{
+    margin:0;padding:0;
+}
+@mixin clearfix() {
+    &:after {
+    content: " "; 
+    display: table; 
+    clear: both;
+    }
+}
+a{
+    text-decoration: none;
+    color:$color-666;
+}
+li{
+    list-style:none;
+}
+/*----顶部---top*/
+.header-top{
+    height:$top_left-height;
+    background:$bg-f2f2f2;
+    font-size:12px;
+    line-height:30px;
+    .wrapper{
+        width:$wrapper-width;
+        margin:0 auto;
+    }
+    .top_left{       
+        color:$color-666;
+        float:left;
+    }
+    .top_right{
+        float:right;
+        .login{
+            color:$color-666;
+            &:hover{
+                color:orangered;
+            }
+        }
+        .register{
+            @extend .login;
+        }
+        .top-text{
+            color:$color-666;
+            margin-left:10px;
+            &:hover{
+                color:orangered;
+            }
+        }         
+    }
+/*顶部----个人中心--------*/
+    .user-content{
+        display:inline-block;
+        padding:0 14px;
+        margin-left:10px;
+        position: relative;
+        &:hover{
+            color:orangered;
+            b{
+                border-bottom-color: orangered;
+                transform: rotate(180deg);
+                top:12px;
+            }
+            ul{
+                display:block;
+            }           
+        }
+        b{
+            position: absolute;
+            border:6px solid transparent;
+            border-bottom-color: #666;
+            display: block;
+            top:5px;
+            right:-1px;
+            transition: all 0.3s;
+            transform: rotate(0deg);
+        }
+        ul{
+            position: absolute; 
+            width:66px;
+            padding:0 8px;
+            left:4px;
+            border:1px solid #ccc;
+            border-top:0;
+            z-index:10;
+            background:#fff;
+            top:18px;
+            display:none;
+            a:hover{
+                color:orangered;
+            }
+        }
+    }
+/*顶部----购物车------*/
+    .shopcart{
+        color:$color-666;
+        margin-left:28px;
+        &:hover{
+            color:orangered;
+        }
+    }
+/*顶部----会员俱乐部------*/
+    .member-content{
+        @extend .user-content;
+    }
+/*顶部----客服服务------*/
+    .kf-content{
+        @extend .user-content;
+        margin-left:0;
+        .kf-content-down{
+            width:100px;
+            position: absolute;
+            right:-20px;
+            border:1px solid #ccc;
+            border-top:0;
+            z-index:10;
+            background:#fff;
+            color:#000;
+            text-align: center;
+            margin:0 6px;
+            cursor: pointer;
+            display: none;
+            i{           
+                display:inline-block;
+                width:13px;
+                height:13px;
+                vertical-align: middle;
+                margin-right:4px;
+                background:url(https://snewww.mianshui365.com/assets/images/kf_icons.png) -39px -16px no-repeat;
+                overflow: hidden;
+            }
+            &:hover{
+                color:orangered;
+                i{
+                    background-position:-39px -1px;
+                }
+            }
+        }
+        &:hover .kf-content-down{
+            display: block;
+        }
+        
+    }
+/*顶部----客户端下载------*/
+    .download-content{
+        @extend .user-content;
+        margin-left:0;
+        img{
+            position: absolute;
+            right:0;
+            border:1px solid #ccc;
+            border-top:0;
+            z-index:10;
+            display: none;
+        }
+        &:hover img{
+            display:block;
+        }
+    }
+}
+/*----顶部---middle*/
+.header-middle{
+    .wrapper{
+        width:1200px;
+        margin:0 auto;
+        height:100px;
+        @include clearfix();
+    }
+/*----顶部---logo*/
+    .logo{
+        float:left;
+        width:192px;
+        padding-top:21px;
+        height:61px;
+    }
+/*----顶部---search搜索框*/
+    .search{
+        position: relative;
+        margin-top:24px;
+        float:right;
+        display: inline-block;
+        width:600px;
+        height:34px;
+        border: 3px solid #ff4a00;
+        overflow: hidden;
+        text-align: right;
+        font-size:0;
+        .txt{
+            vertical-align: top;
+            input{
+                height: 24px;
+                padding: 5px 0;
+                border: 0;
+                width: 475px;
+                color: #000;
+                line-height: 24px;
+                font-size: 12px;
+                outline: none;
+            }
+        }
+        a{
+            height: 34px;
+            line-height: 34px;
+            text-align: center;
+            width: 120px;
+            vertical-align: top;
+            color: #fff;
+            background-color: #ff4a00;
+            font-size: 14px;
+            display: inline-block;
+        }
+    }
+}
+/*----顶部---bot*/
+.header-bot{   
+    width:1200px;
+    margin:0 auto;
+    .nav{
+        @include clearfix();
+        h2{
+            margin:0;
+            width: 200px;
+            height:40px;
+            line-height:40px;
+            font-size: 14px;
+            color: #fff;
+            background-color: #ff4a00;
+            text-align: center;
+        }
+        >li{
+            float:left;
+            >a{
+                padding:0 25px;
+                display: inline-block;
+                font-size:14px;
+                color:#000;
+                text-align: center;
+                line-height: 40px;
+                &:hover{
+                    color:#ff7646;
+                }
+            }
+        }
+        .brands{
+            position: relative;
+            b{
+                position: absolute;
+                border:6px solid transparent;
+                border-bottom-color: #666;
+                display: block;
+                top:10px;
+                right:6px;
+                transition: all 0.3s;
+                transform: rotate(0deg);
+            }
+            .sub-brands{
+                position: absolute;
+                width:130px;
+                left:-20px;
+                top:40px;
+                background-color: #fff;
+                box-sizing: border-box;
+                border: 1px solid red;
+                z-index: 20;
+                overflow: hidden;
+                display: none;
+                a{
+                    display: block;
+                    border-bottom: 1px solid #e6e6e6;
+                    height: 40px;
+                    box-sizing: border-box;
+                    text-align: center;
+                    color:#000;
+                    font-size: 14px;
+                    line-height: 40px;
+                }
+            }
+            &:hover{
+                .sub-brands{
+                    display: block;
+                }
+                b{
+                    transform: rotate(180deg);
+                    top:15px;
+                }
+                a{
+                    color:#000;
+                }
+            }           
+        }
+    }
+    .xl-img{
+        position: relative;
+        em{
+            width:56px;
+            height:21px;
+            position: absolute;
+            left:18px;
+            top:-10px;
+            display: block;
+            overflow: hidden;
+            background: url(https://snewww.mianshui365.com/assets/images/label.png) no-repeat -2px -25px;
+        }
+    }
+    .member-img{
+        @extend .xl-img;
+        em{
+            background-position: 4px -79px;
+            left:32px;
+        }
+    }
+}
+
