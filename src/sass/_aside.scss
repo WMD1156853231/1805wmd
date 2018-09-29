@@ -1,13 +1,20 @@
 @charset "utf-8";
+@mixin clearfix() {
+    &:after {
+    content: " "; 
+    display: table; 
+    clear: both;
+    }
+}
 .asidecontent{
     position: fixed;
     top: 0px;
-    right: 0px;
+    right: -280px;
     height: 100%;
     z-index: 100;
 }
 .menu{
-    // position: relative;
+    position: relative;
     text-align: center;
     float: left;
     width: 30px;
@@ -31,17 +38,20 @@
         }
     }
     /*--购物车样式--*/
+    .icon{
+        width:20px;
+        height:20px;
+        display:inline-block;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-image: url(https://snewww.mianshui365.com/assets/images/icons.png?v=20170518_2);
+    }
     .cart{
        padding-top:5px;
        margin-top:25px;
        text-align: center;
        cursor: pointer; 
-       .icon{
-        display:inline-block;
-        overflow: hidden;
-        background-repeat: no-repeat;
-        background-image: url(https://snewww.mianshui365.com/assets/images/icons.png?v=20170518_2);
-       }
+       
        .icon-cart{
            width:20px;
            height:20px;
@@ -63,6 +73,120 @@
             background-position: -231px -221px;
        }
     }
+    .iconlist{
+        position: relative;
+        width: 30px;
+        height: 25px;
+        padding-top: 5px;
+        margin-top: 8px;
+        cursor: pointer;
+        &:hover{
+            .icon-right{
+                width:81px;
+            }
+        }
+    }
+    .icon-gift{
+        // width:20px;
+        // height:20px;
+        background-position: -289px -111px;
+    }
+    .icon-right{
+        position: absolute;
+        top:0;
+        right: 100%;
+        width: 0px;
+        height: 30px;
+        overflow: hidden;
+        transition: all 0.5s;
+    }
+    .icon-content{
+        width:80px;
+        height: 30px;
+        line-height: 30px;
+        background: #333;
+        text-align: center;
+        color: #FFF;
+        font-size: 14px;
+    }
+    .icon-brands{
+        background-position: -289px -1px;
+    }
+    .icon-brands{
+        background-position: -289px -1px;
+    }
+    .icon-goods{
+        background-position: -289px -45px;
+    }
+    .icon-money{
+        background-position: -289px -133px;
+    }
+    .icon-collect{
+        background-position: -289px -67px;
+    }
+    .icon-footstep{
+        background-position: -289px -89px;
+    }
+    .menu-bot{
+        position: absolute;
+        bottom:10px;
+    }
+    .icon-kf_now{
+        background-position: -210px -221px;
+    }
+    .icon-searchs{
+        background-position: -291px -185px;
+    }
+    .icon-return_top{
+        background-position: -291px -207px;
+    }
+    .icon-right1{
+        @extend .icon-right;
+        top:-120px;
+        height:180px;
+    }
+    .iconlist1{
+        @extend .iconlist;
+        &:hover{
+            .icon-right1{
+                width:301px;
+            }
+        }
+    }
+    .icon-content1{
+        @extend .icon-content;
+        width: 300px;
+        height: 180px;
+        position: relative;
+        @include clearfix();
+        .left-icon{            
+            float: left;
+            width: 150px;
+            text-align: center;
+        }
+        .title{
+            line-height: 28px;
+            height: 28px;
+            font-size: 14px;
+            color: #FFF;
+        }
+        .left-icon-img{
+            margin:0 auto;
+            width: 120px;
+            height: 120px;
+            background-repeat: no-repeat;
+            background-image: url(https://snewww.mianshui365.com/assets/images/right-bar-icons.png);
+            background-position: -383px -166px;
+        }
+        .right-icon{
+            @extend .left-icon;
+        }
+        .right-icon-img{
+            @extend .left-icon-img;
+            background-position: -261px -166px;
+        }
+    }
+    
 }
 /*---右侧隐藏部分---*/
 .right-layer{
