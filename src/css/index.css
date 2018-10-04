@@ -1,4 +1,12 @@
 @charset "UTF-8";
+html, body {
+  height: 100%;
+}
+
+body {
+  width: 1489.2px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -85,7 +93,7 @@ li {
   border-top: 0;
   z-index: 10;
   background: #fff;
-  top: 18px;
+  /*top:20px;*/
   display: none;
 }
 .header-top .user-content ul a:hover, .header-top .member-content ul a:hover, .header-top .kf-content ul a:hover, .header-top .download-content ul a:hover {
@@ -301,6 +309,165 @@ li {
 .header-bot .member-img em {
   background-position: 4px -79px;
   left: 32px;
+}
+
+.nav_all {
+  position: relative;
+}
+.nav_all .sub-nav {
+  position: absolute;
+  width: 200px;
+  z-index: 10;
+  left: 0;
+  top: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.nav_all .icon {
+  width: 30px;
+  height: 28px;
+  margin: 16px 0 0 17px;
+  display: inline-block;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-image: url(https://snewww.mianshui365.com/assets/images/icons.png?v=20170518_2);
+}
+.nav_all .icon-skin {
+  background-position: -274px -155px;
+}
+.nav_all .icon-cosmetics {
+  background-position: -195px -191px;
+}
+.nav_all .icon-watch {
+  background-position: -259px -215px;
+}
+.nav_all .icon-bag {
+  background-position: -242px -155px;
+}
+.nav_all .icon-accesory {
+  background-position: -227px -191px;
+}
+.nav_all .icon-life {
+  background-position: -259px -185px;
+}
+.nav_all .item {
+  position: relative;
+}
+.nav_all .item:hover .sub-nav-right {
+  display: block;
+}
+.nav_all .item > span {
+  position: absolute;
+  left: 60px;
+  top: 22px;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+}
+.nav_all .item > p {
+  width: 183px;
+  padding-left: 17px;
+  color: #fff;
+  margin-top: 3px;
+  padding-bottom: 10.6px;
+}
+.nav_all .item > p > a {
+  line-height: 20px;
+  color: #fff;
+}
+.nav_all .item hr {
+  position: absolute;
+  bottom: 0;
+  width: 160px;
+  border-bottom: 1px #545454 dashed;
+  border-top: none;
+  margin-left: 20px;
+}
+.nav_all .item:hover {
+  background: #ff4a00;
+}
+.nav_all .sub-nav-right {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  padding: 15px 30px;
+  width: 940px;
+  height: 448px;
+  background: #fff;
+  border: 1px solid #ff5b40;
+  z-index: 20;
+  display: none;
+}
+.nav_all .sub_items {
+  float: left;
+  width: 520px;
+}
+.nav_all .sub_items dl {
+  padding: 12px 0;
+}
+.nav_all .sub_items dl:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.nav_all .sub_items dt {
+  width: 70px;
+  float: left;
+  line-height: 20px;
+}
+.nav_all .sub_items dt a {
+  font-size: 14px;
+  color: #333;
+  line-height: 20px;
+}
+.nav_all .sub_items dd {
+  width: 440px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e6e6e6;
+  float: left;
+  line-height: 20px;
+}
+.nav_all .sub_items dd a {
+  margin: 0 15px 0 0;
+  display: inline-block;
+  color: #666;
+  line-height: 20px;
+}
+.nav_all .items-logo {
+  float: left;
+  margin-left: 35px;
+  width: 368px;
+  height: 404px;
+  box-sizing: border-box;
+}
+.nav_all .items-logo li {
+  float: left;
+  height: 120px;
+}
+.nav_all .items-logo a {
+  display: table-cell;
+  /*图片垂直居中于元素*/
+  border: 1px solid #e6e6e6;
+  border-bottom: none;
+  width: 122px;
+  height: 122px;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+.nav_all .items-logo img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.nav_all .sub-last_li a {
+  width: 366px;
+  height: 162px;
+  border: 1px solid #e6e6e6;
+}
+.nav_all .sub-last_li img {
+  height: auto;
+  vertical-align: middle;
 }
 
 .asidecontent {
@@ -652,14 +819,6 @@ body {
 }
 .footer .footer-believe span {
   padding: 0 30px;
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  width: 1489.2px;
 }
 
 /*# sourceMappingURL=index.css.map */
