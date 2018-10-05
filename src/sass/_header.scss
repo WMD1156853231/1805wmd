@@ -3,6 +3,12 @@ $top_left-height:30px;
 $wrapper-width:1200px;
 $bg-f2f2f2:#f2f2f2;
 $color-666:#666;
+html,body{
+    height:100%;
+}
+body{
+    width:1489.2px;
+}
 *{
     margin:0;padding:0;
 }
