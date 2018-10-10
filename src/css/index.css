@@ -79,8 +79,8 @@ li {
   border: 6px solid transparent;
   border-bottom-color: #666;
   display: block;
-  top: 5px;
-  right: -1px;
+  top: 7px;
+  right: 0px;
   transition: all 0.3s;
   transform: rotate(0deg);
 }
@@ -181,7 +181,7 @@ li {
   position: relative;
   margin-top: 24px;
   float: right;
-  display: inline-block;
+  display: block;
   width: 600px;
   height: 34px;
   border: 3px solid #ff4a00;
@@ -504,6 +504,9 @@ li {
 .menu .hover-ff4a00:hover {
   background-color: #ff4a00;
 }
+.menu .bg-ff4a00 {
+  background-color: #ff4a00;
+}
 .menu .icon {
   width: 20px;
   height: 20px;
@@ -649,6 +652,135 @@ li {
   background: #f5f5f5;
 }
 
+/*--------购物流程-------------*/
+/*头部公用样式*/
+.shop-head {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 280px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+  background: #FFF;
+}
+.shop-head span {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-position: -2px -288px;
+  display: inline-block;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-image: url(//snewww.mianshui365.com/assets/images/right-bar-icons.png);
+}
+
+/*---------流程---------*/
+.right-shop-step {
+  display: none;
+}
+
+.shop-step-content, .right-cart-goods .cart-goods-content {
+  position: absolute;
+  width: 280px;
+  right: 0px;
+  top: 60px;
+  bottom: 0px;
+  overflow: hidden;
+}
+.shop-step-content .overview, .right-cart-goods .cart-goods-content .overview {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  margin: 20px;
+}
+
+.shop-right-icon {
+  display: inline-block;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-image: url(https://snewww.mianshui365.com/assets/images/right-bar-icons.png);
+}
+
+.wh {
+  width: 240px;
+  height: 80px;
+}
+
+.step-title {
+  padding-left: 90px;
+  font-size: 16px;
+  color: #ff4a00;
+  line-height: 18px;
+  margin-top: 18px;
+}
+
+.step-exp {
+  margin-top: 8px;
+  padding-left: 90px;
+  font-size: 12px;
+  color: #999;
+}
+
+.icon-step1 {
+  background-position: -2px -2px;
+}
+
+.icon-step2 {
+  background-position: -244px -2px;
+}
+
+.icon-step3 {
+  background-position: -2px -84px;
+}
+
+.icon-step4 {
+  background-position: -244px -84px;
+}
+
+.icon-step5 {
+  background-position: -2px -166px;
+}
+
+.down-wrap {
+  width: 240px;
+  text-align: center;
+  line-height: 0;
+  padding: 10px 0px;
+}
+.down-wrap .down-wh {
+  width: 15px;
+  height: 8px;
+  background-position: -244px -166px;
+}
+
+/*-------购物车--------*/
+.right-cart-goods .layer-body {
+  text-align: center;
+  margin-top: 60px;
+}
+.right-cart-goods .layer-body span {
+  width: 80px;
+  height: 80px;
+  background-position: -24px -288px;
+  display: inline-block;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-image: url(https://snewww.mianshui365.com/assets/images/right-bar-icons.png);
+}
+.right-cart-goods .layer-body p {
+  font-size: 12px;
+  color: #999;
+  line-height: 18px;
+  margin-top: 10px;
+}
+
 body {
   font-size: 12px;
 }
@@ -660,7 +792,7 @@ body {
   background-color: #f4f4f4;
 }
 .footer .footer-top {
-  background: #000;
+  background: #333;
 }
 .footer .wrapper {
   width: 1200px;
@@ -821,6 +953,103 @@ body {
   padding: 0 30px;
 }
 
+/*----------------轮播图---------------*/
+.figure {
+  width: 100%;
+  height: 480px;
+  min-width: 1200px;
+  position: relative;
+  overflow: hidden;
+}
+.figure .figure-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.figure .figure-img li {
+  opacity: 1;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.figure .figure-img li:nth-child(2) {
+  background: #f8ecf3;
+}
+.figure .figure-img li:nth-child(3) {
+  background: #e9e0f5;
+}
+.figure .figure-img li:nth-child(4) {
+  background: #7fe0ff;
+}
+.figure .figure-img li:nth-child(5) {
+  background: #f5ede6;
+}
+.figure img {
+  display: block;
+  width: 1400px;
+  height: 480px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -700px;
+  border: 0;
+}
+.figure .prev, .figure .next {
+  position: absolute;
+  left: 50%;
+  margin-left: -382px;
+  top: 50%;
+  margin-top: -31px;
+  background: url(https://snewww.mianshui365.com/images/icon-arrow.png) no-repeat;
+  width: 28px;
+  height: 62px;
+  display: none;
+  cursor: pointer;
+  z-index: 2;
+  background-position: 0px 0px;
+}
+.figure .next {
+  margin-left: 572px;
+  background-position: -32px 0px;
+}
+.figure .bullet {
+  margin-left: -51.5px;
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  z-index: 30;
+}
+.figure .bullet ul {
+  height: 20px;
+  padding: 0 4px;
+}
+.figure .bullet li {
+  float: left;
+  margin: 4px 4px;
+}
+.figure .bullet em {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  text-indent: -9999px;
+  cursor: pointer;
+  opacity: .5;
+  font-style: normal;
+}
+.figure .current em {
+  width: 15px;
+  opacity: 1;
+}
+
 /*------------楼梯-----------*/
 #loutinav {
   position: fixed;
@@ -832,6 +1061,7 @@ body {
   border-bottom: 0;
   z-index: 99;
   background: #f5f5f5;
+  display: none;
 }
 #loutinav li {
   border-bottom: #e6e6e6 1px solid;
@@ -1095,7 +1325,6 @@ body {
   width: 1199px;
   margin: 0 auto;
   font-size: 0;
-  border-top: #e6e6e6 1px solid;
   border-right: #e6e6e6 1px solid;
 }
 .hot-tab ul:after {
@@ -1106,6 +1335,7 @@ body {
 .hot-tab li {
   float: left;
   width: 16.6666%;
+  border-top: #e6e6e6 1px solid;
   box-sizing: border-box;
 }
 .hot-tab a {
@@ -1123,6 +1353,13 @@ body {
   color: #ff5B28;
   border-top: 1px solid #ff5B28;
   border-bottom: 0;
+}
+.hot-tab .check a {
+  border-bottom: 0;
+}
+
+.hot-goodlist ul {
+  display: none;
 }
 
 /*-----------免税热卖内容-----------------*/

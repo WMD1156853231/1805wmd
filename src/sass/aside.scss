@@ -37,6 +37,9 @@
            background-color:#ff4a00; 
         }
     }
+    .bg-ff4a00{
+        background-color:#ff4a00;
+    }
     /*--购物车样式--*/
     .icon{
         width:20px;
@@ -194,5 +197,126 @@
     width:280px;
     height:100%;
     background: #f5f5f5;
+}
+/*--------购物流程-------------*/
+/*头部公用样式*/
+.shop-head{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 280px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #999;
+    font-size: 16px;
+    background: #FFF;
+    span{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        background-position: -2px -288px;
+        display: inline-block;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-image: url(//snewww.mianshui365.com/assets/images/right-bar-icons.png);
+    }
+}
+/*---------流程---------*/
+.right-shop-step{
+    display:none;
+}
+.shop-step-content{
+    position: absolute;
+    width: 280px;
+    right: 0px;
+    top: 60px;
+    bottom: 0px;
+    overflow: hidden;
+    .overview{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin:20px;
+    }
+}
+.shop-right-icon{
+    display: inline-block;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-image: url(https://snewww.mianshui365.com/assets/images/right-bar-icons.png);   
+}
+.wh{
+    width: 240px;
+    height: 80px;
+}
+.step-title{
+    padding-left: 90px;
+    font-size: 16px;
+    color: #ff4a00;
+    line-height: 18px;
+    margin-top: 18px;
+}
+.step-exp{
+    margin-top: 8px;
+    padding-left: 90px;
+    font-size: 12px;
+    color: #999;
+}
+.icon-step1{
+    background-position: -2px -2px;
+}
+.icon-step2{
+    background-position: -244px -2px;
+}
+.icon-step3{
+    background-position: -2px -84px;
+}
+.icon-step4{
+    background-position: -244px -84px;
+}
+.icon-step5{
+    background-position: -2px -166px;
+}
+.down-wrap{
+    width:240px;
+    text-align: center;
+    line-height: 0;
+    padding: 10px 0px;
+    .down-wh{
+        width: 15px;
+        height: 8px;
+        background-position: -244px -166px;
+    }   
+}
+/*-------购物车--------*/
+.right-cart-goods{
+    .cart-goods-content{
+        @extend .shop-step-content;
+    }
+    .layer-body{
+        text-align: center;
+        margin-top: 60px;
+        span{
+            width: 80px;
+            height: 80px;
+            background-position: -24px -288px;
+            display: inline-block;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-image: url(https://snewww.mianshui365.com/assets/images/right-bar-icons.png);
+        }
+        p{
+            font-size: 12px;
+            color: #999;
+            line-height: 18px;
+            margin-top: 10px;
+        }
+    }
+    
 }
 

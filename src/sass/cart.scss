@@ -1,0 +1,217 @@
+@charset "utf-8";
+@import "header.scss";
+@import "footer.scss";
+body{
+    width:1519.2px;
+}
+/*顶部位置修改*/
+.header-top{
+    .top_right{
+        float:left;
+        margin-left:235px;
+        .top-text{
+            margin:0 4px 0 14px;
+        }
+    }
+    
+}
+/*logo和搜索框位置修改*/
+.header-middle{
+    .wrapper{
+        width:960px;
+    }
+    .search{
+        margin:30px -5px 0 0;
+    }
+}
+/*二级导航修改*/
+.nav_all{
+    &:hover{
+        .sub-nav{
+            display: block;
+        }
+    }
+    .sub-nav{
+        display:none;
+    }
+}
+.topcontent{
+    border-bottom: 2px #ff4a00 solid;
+}
+/*-------------------内容-----------------------*/
+#mian{
+    width: 960px;
+    margin: 0 auto;
+    height: auto;
+}
+/*-----------------购物流程------------------*/
+.lc_top{
+    @include clearfix();
+    width: 953px;
+    height: 63px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.lc_content{
+    width: 900px;
+    height: 63px;
+    float: right;
+    margin-right: 27px;
+}
+/*--------------免税-------------------*/
+.cart-free{
+    @include clearfix();
+    position: relative;
+    width: 958px;
+    height: 30px;
+    margin: 10px auto;
+    line-height: 30px;
+    color: #666;
+    text-align: right;
+    span{
+        display:block;
+        margin-right:23px;
+    }
+    em{
+        position: absolute;
+        right:0;
+        top:7px;
+        width:6px;
+        height:14px;
+        display:block;
+        padding: 0 4px;
+        background: #fff;
+        border: 1px solid #666;
+        border-radius: 20px;
+        line-height: 14px;
+        text-align: center;
+        cursor: pointer;
+        font-style: normal;
+        &:hover{
+            .idcard{
+                display: block;
+            }
+        }
+    }
+    .idcard{
+        position: absolute;
+        top: 34px;
+        right: -2px;
+        display: none;
+        z-index: 4;
+        width: 360px;
+        height: 270px;
+        background: url(//s1www.mianshui365.com/images/cart-idcard-exp.jpg) no-repeat;
+        border: 1px solid #FE7646;
+        border-radius: 5px;
+    }
+}
+/*------------------离岛地点------------------*/
+.leave-land{
+    width: 960px;
+    margin:0 auto;
+    height: 55px;
+    margin-bottom: 10px;
+}
+.leave-place{
+    width: 960px;
+    background-color: #f6f6f6;
+    border: 1px solid #eee;
+    padding: 10px;
+    color: #fff;
+    font-size: 14px;
+    box-sizing: border-box;
+    span{
+        font-weight: bold;
+        color: #000;
+    }
+    select{
+        color: #333;
+        margin-right: 10px;
+        padding: 5px 10px;
+        cursor: pointer;
+        outline: 0;
+    }
+    .color-orange{
+        color:#ee761a;
+        font-weight: normal;
+    }
+}
+/*---------------确认订单----------------------*/
+.buy-wrap{
+    height: 60px;
+    width: 960px;
+    margin: 20px auto;
+}
+.buy-box{
+    @include clearfix();
+    width: 960px;
+    height: 60px;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 1;
+    border-bottom: 1px solid #ededed;
+}
+.buy-left{
+    width: 762px;
+    background: #f6f6f6;
+    float: left;
+    padding-right: 18px;
+}
+.checkall{
+    width: 134px;
+    float: left;
+    line-height: 60px;
+    margin-left: 5px;
+    input{
+        float: left;
+        margin: 25px 5px 0 16px;
+        -webkit-appearance: none;
+        background: url(//s1www.mianshui365.com/images/duigou_03.jpg) no-repeat;
+        height: 14px;
+        width: 14px;
+        outline: none;
+    }
+    input[type="checkbox"]:checked{
+        background-position: -14px 0;
+        border: none;
+    }
+}
+.sum{
+    width: 620px;
+    float: left;   
+    text-align: right;
+    .sumpro{
+        font-size: 12px;
+        color: #666666;
+        line-height: 26px;
+    }
+    .cart-sum{
+        line-height:30px;
+    }
+    em{
+        font-size: 16px;
+        font-style: normal;
+    }
+    span{
+        font-size: 24px;
+        color: #fc764d;
+    }
+}
+.buy-right{
+    float: right;
+    font-size: 22px;
+    line-height: 60px;
+    text-align: center;
+    a{
+        background-color: #d9d9d9;
+        cursor: default;
+        width: 180px;
+        height: 60px;
+        display: block;
+        color: #fff;
+    }
+}
+.footer{
+    margin-top:0;
+}

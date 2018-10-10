@@ -1,0 +1,1 @@
+require(['aside_effect']);

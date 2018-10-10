@@ -642,6 +642,28 @@ body {
   padding: 0 30px;
 }
 
+body {
+  width: 1519.2px;
+}
+
+/*顶部位置修改*/
+.header-top .top_right {
+  float: left;
+  margin-left: 235px;
+}
+.header-top .top_right .top-text {
+  margin: 0 4px 0 14px;
+}
+
+/*logo和搜索框位置修改*/
+.header-middle .wrapper {
+  width: 960px;
+}
+.header-middle .search {
+  margin: 30px -5px 0 0;
+}
+
+/*二级导航修改*/
 .nav_all:hover .sub-nav {
   display: block;
 }
@@ -653,440 +675,204 @@ body {
   border-bottom: 2px #ff4a00 solid;
 }
 
-/*---------------mian-top-------------------*/
-#main {
-  /*---------------内容开始-------------------*/
-  /*---------------提货服务时间-------------------*/
-  /*-------------内容左边部分(放大镜)------------------*/
-  /*-----------选择图片-------------*/
-  /*----------------选择图片----------------*/
-  /*---------------价格----------------*/
-  /*---------------促销信息----------------*/
-  /*-------------服务------------------*/
-  /*------------离岛地点------------*/
-  /*--------------购物车--------------*/
-}
-#main .main-top {
-  margin: 10px auto 5px;
+/*-------------------内容-----------------------*/
+#mian {
   width: 960px;
-  height: 31px;
-  line-height: 31px;
-}
-#main .main-top p {
-  float: left;
-}
-#main .main-top .link-color {
-  color: #303030;
-}
-#main .main-top i {
-  font-style: normal;
-  color: #ee761a;
-}
-#main .main-top a:hover {
-  color: #ee761a;
-}
-#main .main-content {
-  position: relative;
-  width: 920px;
-  padding: 20px 20px 10px;
-  margin: 0 auto 0;
-  background-color: #fff;
-}
-#main .main-content:after {
-  content: " ";
-  display: table;
-  clear: both;
-}
-#main .service-time {
-  position: fixed;
-  top: 232px;
-  right: 199.5px;
-  width: 70px;
-  border: 1px solid #f07700;
-  border-radius: 5px;
-}
-#main .service-time .title {
-  font-size: 12px;
-  line-height: 16px;
-  display: block;
-  padding: 10px 5px;
-  color: #fff;
-  background-color: #f07700;
-}
-#main .service-time .time {
-  line-height: 16px;
-  display: block;
-  width: 100%;
-  text-align: center;
-  color: #666;
-}
-#main .main-content-left {
-  float: left;
-}
-#main .img-item {
-  width: 400px;
-  height: 520px;
-  position: relative;
-}
-#main .spic {
-  position: relative;
-  width: 400px;
-  height: 400px;
-  font-size: 0;
-}
-#main .spic img {
-  width: 400px;
-}
-#main .sf {
-  width: 200px;
-  height: 200px;
-  display: none;
-  left: 0;
-  top: 0;
-  position: absolute;
-  background-image: url(https://snewww.mianshui365.com/images/detail/zfont.png);
-  cursor: move;
-}
-#main .bf {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  left: 400px;
-  top: 0;
-  z-index: 3;
-  border: 1px #eee solid;
-  overflow: hidden;
-  display: none;
-}
-#main .bf img {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-}
-#main .spic-list {
-  position: absolute;
-  margin: 10px 30px 0;
-  height: 75px;
-  top: 420px;
-}
-#main .list {
-  width: 340px;
-  height: 75px;
-  overflow: hidden;
-}
-#main .list:after {
-  content: " ";
-  display: table;
-  clear: both;
-}
-#main .list li {
-  float: left;
-  width: 71px;
-  height: 71px;
-  margin-right: 12px;
-}
-#main .list img {
-  width: 71px;
-  height: 71px;
-}
-#main .main-content-right {
-  position: relative;
-  float: right;
-  width: 485px;
-}
-#main .title {
-  padding: 5px 0 20px;
-  line-height: 24px;
-  border-bottom: 1px #ededed solid;
-  font-size: 18px;
-  color: #303030;
-  margin-bottom: 10px;
-  font-weight: 500;
-}
-#main .title a {
-  color: #EE761A;
-}
-#main .title a:hover {
-  color: #428bca;
-  text-decoration: underline;
-}
-#main .price {
-  padding-top: 10px;
-  color: #838383;
-  margin: 0 0 10px;
-}
-#main .price li {
-  line-height: 40px;
-}
-#main .price b {
-  font-size: 16px;
-  color: #ee761a;
-}
-#main .free-price {
-  color: #303030;
-}
-#main .special {
-  font-size: 26px;
-  color: #ee761a;
-  font-weight: bolder;
-}
-#main .special-info {
-  padding-top: 10px;
-  border-top: 1px solid #ededed;
-  color: #838383;
-  margin-bottom: 10px;
-  line-height: 40px;
-}
-#main .special-info span {
-  width: 41px;
-  text-align: center;
-  display: inline-block;
-  padding: 0px 5px;
-  margin: 0 5px 0 2px;
-  line-height: 22px;
-  color: #fff;
-  background: #EE761A;
-}
-#main .special-info a {
-  display: inline-block;
-  width: 300px;
-  color: #333;
-  cursor: pointer;
-}
-#main .special-info a:hover {
-  color: #428bca;
-  text-decoration: underline;
-}
-#main .change {
-  background-color: #fbfbfb;
-  padding: 20px 10px 2px 20px;
-  color: #838383;
-  height: 92px;
-  border: 1px #ededed solid;
-}
-#main .change ul {
-  margin: 0 0 10px 0;
-}
-#main .change li {
-  line-height: 35px;
-}
-#main .size {
-  position: relative;
-  display: inline-block;
-  margin: 0 5px;
-  padding: 0 10px;
-  background-color: #fff;
-  border: 1px #bababa solid;
-  height: 25px;
-  line-height: 24px;
-  vertical-align: middle;
-  color: #303030;
-  cursor: pointer;
-}
-#main .ok {
-  position: absolute;
-  display: block;
-  right: 0;
-  bottom: 0;
-  width: 11px;
-  height: 11px;
-  background: url(https://snewww.mianshui365.com/images/icon.png?t=1) 0 -373px no-repeat;
-  z-index: 2;
-}
-#main .active {
-  border: 2px solid #ee761a;
-}
-#main .sum {
-  margin-top: 10px;
-}
-#main .reduce, #main .add {
-  display: inline-block;
-  background-color: #ccc;
-  opacity: 0.6;
-  width: 28px;
-  height: 23px;
-  background: url(https://snewww.mianshui365.com/images/icon.png?t=1) 2px -320px no-repeat #fff;
-  overflow: hidden;
-  text-indent: -999px;
-  vertical-align: middle;
-  border: 1px #bababa solid;
-  border-right: 1px #dcdcdc solid;
-}
-#main .val {
-  display: inline-block;
-  padding: 0 5px;
-  width: 50px;
-  height: 23px;
-  line-height: 23px;
-  border: 1px #bababa solid;
-  border-width: 1px 0;
-  background-color: #fff;
-  vertical-align: middle;
-  text-align: center;
-  color: #303030;
-}
-#main .add {
-  display: inline-block;
-  margin-right: 10px;
-  background-position: -22px -320px;
-  color: #333;
-}
-#main .service-text {
-  position: relative;
-  padding-top: 10px;
-  border-top: 1px #ededed solid;
-}
-#main .service-text:after {
-  content: " ";
-  display: table;
-  clear: both;
-}
-#main .service-text span {
-  float: left;
-  display: block;
-  line-height: 20px;
-  color: #838383;
-}
-#main .service-text:hover .pro {
-  display: block;
-}
-#main .text1 {
-  width: 42px;
-}
-#main .text2, #main .text3, #main .text4 {
-  padding-left: 0px;
-  width: 120px;
-  margin-right: 10px;
+  margin: 0 auto;
   height: auto;
 }
-#main .text2 i, #main .text3 i, #main .text4 i {
-  display: inline-block;
-  background-color: #f07700;
-  padding: 0px 1px 0px 2px;
-  border-radius: 2px;
-  color: #fff;
-  margin-right: 4px;
-  line-height: 15px;
-  font-style: normal;
-}
-#main .text3, #main .text4 {
-  width: 73px;
-}
-#main .pro {
-  position: absolute;
-  bottom: 30px;
-  right: 99px;
-  z-index: 4;
-  display: none;
-  background-color: #FE7646;
-  border-radius: 5px;
-  color: #fff;
-  padding: 8px 15px;
-}
-#main .pro h1 {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.1;
-  color: #fff;
-  margin-bottom: 10px;
-}
-#main .pro p {
-  line-height: 25px;
-  color: #fff;
-}
-#main .leave {
+
+/*-----------------购物流程------------------*/
+.lc_top {
+  width: 953px;
+  height: 63px;
+  margin: 0 auto;
   margin-top: 20px;
-  list-style: none;
-  line-height: 26px;
-  color: #666;
 }
-#main #select_airport {
-  margin-right: 10px;
-  padding: 5px 10px;
-  color: #838383;
-  cursor: pointer;
-  outline: none;
-}
-#main .deliver {
-  color: #838383;
-  margin-right: 5px;
-}
-#main .cart {
-  padding: 25px 0;
-}
-#main .cart:after {
+.lc_top:after {
   content: " ";
   display: table;
   clear: both;
 }
-#main .shop {
-  float: left;
-  display: block;
-  width: 180px;
-  height: 51px;
-  background: url(https://snewww.mianshui365.com/images/btn.png) 0 -46px no-repeat;
-  overflow: hidden;
-  text-indent: -999px;
-}
-#main .shop:hover {
-  background-position: -184px -46px;
-}
-#main .cart-right {
-  float: left;
-  padding-top: 15px;
-  height: 30px;
-  padding-left: 15px;
-  border-left: 1px #ededed solid;
-  margin: 0 0 0 30px;
-}
-#main .info-kf, #main .info-collection, #main .info-share {
-  display: block;
-  float: left;
-  margin-top: 13px;
-  margin-right: 18px;
-  color: #333;
-  cursor: pointer;
-}
-#main .info-kf:hover i, #main .info-collection:hover i, #main .info-share:hover i {
-  background-position: -1px -1px;
-}
-#main .info-kf:hover em, #main .info-collection:hover em, #main .info-share:hover em {
-  color: #ee761a;
-}
-#main .info-kf i, #main .info-collection i, #main .info-share i {
-  vertical-align: middle;
-  display: inline-block;
-  overflow: hidden;
-  margin-right: 5px;
-  width: 17px;
-  height: 17px;
-  background-image: url(https://snewww.mianshui365.com/assets/images/kf_icons.png);
-  background-repeat: no-repeat;
-  background-position: -20px -1px;
-  font-style: normal;
-}
-#main .info-kf em, #main .info-collection em, #main .info-share em {
-  font-style: normal;
-}
-#main .info-collection i {
-  width: 16px;
-  height: 18px;
-  background-image: url(//snewww.mianshui365.com/images/icon.png?t=1);
-  background-position: -14px -489px;
-  background-repeat: no-repeat;
-}
-#main .info-collection:hover i {
-  background-position: -14px -508px;
-}
-#main .info-share i {
-  width: 16px;
-  height: 18px;
-  background-image: url(//snewww.mianshui365.com/assets/plugins/sbshare/images/icon-share.png);
-  background-position: 0px -18px;
-  background-repeat: no-repeat;
-}
-#main .info-share:hover i {
-  background-position: -0px -56px;
+
+.lc_content {
+  width: 900px;
+  height: 63px;
+  float: right;
+  margin-right: 27px;
 }
 
-/*# sourceMappingURL=details.css.map */
+/*--------------免税-------------------*/
+.cart-free {
+  position: relative;
+  width: 958px;
+  height: 30px;
+  margin: 10px auto;
+  line-height: 30px;
+  color: #666;
+  text-align: right;
+}
+.cart-free:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.cart-free span {
+  display: block;
+  margin-right: 23px;
+}
+.cart-free em {
+  position: absolute;
+  right: 0;
+  top: 7px;
+  width: 6px;
+  height: 14px;
+  display: block;
+  padding: 0 4px;
+  background: #fff;
+  border: 1px solid #666;
+  border-radius: 20px;
+  line-height: 14px;
+  text-align: center;
+  cursor: pointer;
+  font-style: normal;
+}
+.cart-free em:hover .idcard {
+  display: block;
+}
+.cart-free .idcard {
+  position: absolute;
+  top: 34px;
+  right: -2px;
+  display: none;
+  z-index: 4;
+  width: 360px;
+  height: 270px;
+  background: url(//s1www.mianshui365.com/images/cart-idcard-exp.jpg) no-repeat;
+  border: 1px solid #FE7646;
+  border-radius: 5px;
+}
+
+/*------------------离岛地点------------------*/
+.leave-land {
+  width: 960px;
+  margin: 0 auto;
+  height: 55px;
+  margin-bottom: 10px;
+}
+
+.leave-place {
+  width: 960px;
+  background-color: #f6f6f6;
+  border: 1px solid #eee;
+  padding: 10px;
+  color: #fff;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.leave-place span {
+  font-weight: bold;
+  color: #000;
+}
+.leave-place select {
+  color: #333;
+  margin-right: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  outline: 0;
+}
+.leave-place .color-orange {
+  color: #ee761a;
+  font-weight: normal;
+}
+
+/*---------------确认订单----------------------*/
+.buy-wrap {
+  height: 60px;
+  width: 960px;
+  margin: 20px auto;
+}
+
+.buy-box {
+  width: 960px;
+  height: 60px;
+  margin: 0 auto;
+  overflow: hidden;
+  z-index: 1;
+  border-bottom: 1px solid #ededed;
+}
+.buy-box:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.buy-left {
+  width: 762px;
+  background: #f6f6f6;
+  float: left;
+  padding-right: 18px;
+}
+
+.checkall {
+  width: 134px;
+  float: left;
+  line-height: 60px;
+  margin-left: 5px;
+}
+.checkall input {
+  float: left;
+  margin: 25px 5px 0 16px;
+  -webkit-appearance: none;
+  background: url(//s1www.mianshui365.com/images/duigou_03.jpg) no-repeat;
+  height: 14px;
+  width: 14px;
+  outline: none;
+}
+.checkall input[type="checkbox"]:checked {
+  background-position: -14px 0;
+  border: none;
+}
+
+.sum {
+  width: 620px;
+  float: left;
+  text-align: right;
+}
+.sum .sumpro {
+  font-size: 12px;
+  color: #666666;
+  line-height: 26px;
+}
+.sum .cart-sum {
+  line-height: 30px;
+}
+.sum em {
+  font-size: 16px;
+  font-style: normal;
+}
+.sum span {
+  font-size: 24px;
+  color: #fc764d;
+}
+
+.buy-right {
+  float: right;
+  font-size: 22px;
+  line-height: 60px;
+  text-align: center;
+}
+.buy-right a {
+  background-color: #d9d9d9;
+  cursor: default;
+  width: 180px;
+  height: 60px;
+  display: block;
+  color: #fff;
+}
+
+.footer {
+  margin-top: 0;
+}
+
+/*# sourceMappingURL=cart.css.map */

@@ -20,9 +20,10 @@
                     <h3>
                         <span>会员帐号登录</span>
                     </h3>
-                    <form action="login.php" method="post">
+                    
+                    <form method="post" onsubmit="return false;">
                         <p class="title">
-                            <label>用户名/手机号</label>
+                            <label for="username">用户名/手机号</label>
                         </p>
                         <p class="text">
                             <input type="text" id="username" name="username" autocomplete="off" placeholder="请输入您的用户名/手机号">
@@ -35,15 +36,16 @@
                             <input id="password" name="password" type="password" placeholder="请输入登录密码"/>
                             <span class="pass_icon"></span>
                         </p>
+                        <div id="error"></div>
                         <p class="free-login">
                             <span class="left">
-                                <input type="checkbox" name="check">
+                                <input type="checkbox" name="check" class="mb-checkbox">
                                 <i>一个月内免登录</i>
                             </span>
                             <a href="#" class="forget">忘记密码?</a>
                         </p>
                         <p>
-                            <input type="submit" value="登&nbsp;&nbsp;&nbsp;&nbsp;录" class="submit">
+                            <input type="button" value="登录" class="submit" name="submit" id="btn">
                         </p>
                         <p class="go_reg">
                             <span>
@@ -98,6 +100,34 @@
 
 
 		<script src="script/thirdplugins/jquery1.11.3.js" type="text/javascript"></script>
-		<script src="script/js/index.js" type="text/javascript"></script>
+        <!-- <script src="script/js/index.js" type="text/javascript"></script> -->
+        <script>
+            function addCookie(key,value,day){
+					var date=new Date();//创建日期对象
+					date.setDate(date.getDate()+day);//过期时间：获取当前的日期+天数，设置给date
+					document.cookie=key+'='+encodeURI(value)+';expires='+date;//添加cookie，设置过期时间
+				}
+				$('#btn').on('click',function(){
+					var $username=$('#username').val();
+					var $password=$('#password').val();
+					$.ajax({
+						type:'post',
+						url:'../php/login.php',
+						data:{//将用户名和密码传输给后端
+							name:$username,
+							pass:$password
+						},
+						success:function(data){//请求成功，接收后端返回的值
+							if(!data){//用户名或者密码错误
+								$('#error').html('用户名或者密码错误');
+								$('#password').val('');
+							}else{//成功
+								addCookie('UserName',$username,7);
+								location.href='index.html';
+							}
+						}
+					})
+				});
+        </script>
 	</body>
 </html>

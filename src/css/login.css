@@ -116,6 +116,17 @@ body {
   font-size: 12px;
   float: left;
 }
+#main .free-login .mb-checkbox {
+  -webkit-appearance: none;
+  background: url(//s1www.mianshui365.com/images/duigou_03.jpg) no-repeat;
+  height: 14px;
+  width: 14px;
+  outline: none;
+}
+#main .free-login input[type="checkbox"]:checked {
+  background-position: -14px 0;
+  border: none;
+}
 #main .free-login i {
   display: inline-block;
   vertical-align: top;
