@@ -294,7 +294,8 @@
     }   
 }
 /*-------购物车--------*/
-.right-cart-goods{
+.right-goods-cart{
+    display:none;
     .cart-goods-content{
         @extend .shop-step-content;
     }

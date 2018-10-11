@@ -96,8 +96,8 @@
         }
     }
     .sf{
-        width: 200px;
-        height: 200px;
+        // width: 200px;
+        // height: 200px;
         display: none;
         left: 0;
         top: 0;
@@ -138,10 +138,32 @@
             width: 71px;
             height: 71px;
             margin-right:12px;
+            cursor: pointer;
         }
         img{
             width: 71px;
             height: 71px;
+        }
+        .prev{
+            position: absolute;
+            display: block;
+            width: 30px;
+            height: 75px;
+            top: 0;
+            background: url(https://snewww.mianshui365.com/images/icon.png?t=1) 0 0 no-repeat;
+            z-index: 2;
+            left: -30px;
+            background-position: 5px -525px;
+        }
+        .next{
+            position: absolute;
+            display: block;
+            width: 30px;
+            height: 75px;
+            top: 0;
+            background: url(https://snewww.mianshui365.com/images/icon.png?t=1) 0 0 no-repeat;
+            z-index: 2;
+            background-position: -40px -525px;
         }
     }
     

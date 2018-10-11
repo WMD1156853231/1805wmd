@@ -738,8 +738,6 @@ body {
   width: 400px;
 }
 #main .sf {
-  width: 200px;
-  height: 200px;
   display: none;
   left: 0;
   top: 0;
@@ -784,10 +782,32 @@ body {
   width: 71px;
   height: 71px;
   margin-right: 12px;
+  cursor: pointer;
 }
 #main .list img {
   width: 71px;
   height: 71px;
+}
+#main .list .prev {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 75px;
+  top: 0;
+  background: url(https://snewww.mianshui365.com/images/icon.png?t=1) 0 0 no-repeat;
+  z-index: 2;
+  left: -30px;
+  background-position: 5px -525px;
+}
+#main .list .next {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 75px;
+  top: 0;
+  background: url(https://snewww.mianshui365.com/images/icon.png?t=1) 0 0 no-repeat;
+  z-index: 2;
+  background-position: -40px -525px;
 }
 #main .main-content-right {
   position: relative;

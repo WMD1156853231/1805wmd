@@ -29,13 +29,13 @@
                 background: rgb(248, 236, 243);
             }
             &:nth-child(3){
-                background: rgb(233, 224, 245);
+                background: rgb(255, 255, 255);
             }
             &:nth-child(4){
-                background: rgb(127, 224, 255);
+                background: rgb(233, 224, 245);
             }
             &:nth-child(5){
-                background: rgb(245, 237, 230);
+                background: rgb(127, 224, 255);
             }
         }
     }
@@ -60,7 +60,7 @@
         height: 62px;
         display: none;
         cursor: pointer;
-        z-index: 2;
+        z-index: 100;
         background-position: 0px 0px;
     }
     .next{
@@ -286,28 +286,32 @@
             position: absolute;
             top: 32px;
             right: 12px;
+            span{
+                float: left;
+                display: block;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;                
+                background: #dbdbdb;
+                margin-right: 7px;               
+            }
+            .current{
+                background: #999;                    
+            }
         }
-        .current{
-            background: #999;
-            float: left;
-            display: block;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            /*小圆圈未选中的颜色*/
-            // background: #dbdbdb;
-            margin-right: 7px;
-        }
+        
     }
     .brand-nav{
         width: 238px;
         padding-left: 1px;
+        display: none;
         li{
             float: left;
             width: 110px;
             height: 136px;
             padding: 0px 5px 0px 4px;
         }
+        
     }
     .big-brand-img{
         width: 100px;

@@ -2,9 +2,9 @@ define([], function () {
     return {
         glass: (function () {
             $('.topcontent').load('header.html');
-			$('.asidecontent').load('aside.html');
-            $('.footercontent').load('footer.html');
             
+            $('.footercontent').load('footer.html');
+
             $('.spic').hover(function () {
                 $('.sf').css('display', 'block');
                 $('.bf').css('display', 'block');
@@ -40,6 +40,51 @@ define([], function () {
                 $('.sf').css('display', 'none');
                 $('.bf').css('display', 'none');
             });
+
+            //设置ul尺寸
+            // var $li = $('.spic-list .list li');
+            // console.log($('.bpic').width());
+            // var $ul = $('.spic-list .list');
+            // var $liwidth = $li.eq(0).innerWidth();
+            // $ul.width($li.size() * $liwidth);
+
+
+            $('.spic-list .list').on('click','li', function () {
+                var url = $(this).find('img').attr('src');//当前点击的li下面的图片路径
+                $(this).addClass('active').siblings().removeClass('active');
+                $('.spic').find('img').attr('src', url);
+                $('.bpic').attr('src', url);
+            });
+
+            // var $num = 6;//当前ul里面显示的个数。
+            // if ($li.length <= 6) {
+            //     $('#left,#right').css('color', '#fff');
+            // }
+            // $('#right').on('click', function () {
+            //     if ($num < $li.size()) {
+            //         $num++;
+            //         $('#left').css('color', '#333');
+            //         if ($num == $li.size()) {
+            //             $('#right').css('color', '#fff');
+            //         }
+            //         $ul.animate({
+            //             left: -($num - 6) * $liwidth
+            //         });
+            //     }
+            // });
+
+            // $('#left').on('click', function () {
+            //     if ($num > 6) {
+            //         $num--;
+            //         $('#right').css('color', '#333');
+            //         if ($num == 6) {
+            //             $('#left').css('color', '#fff');
+            //         }
+            //         $ul.animate({
+            //             left: -($num - 6) * $liwidth
+            //         });
+            //     }
+            // });
         })()
     }
 });

@@ -32,7 +32,7 @@ define([], function () {
                 function draw(value){
                     var str='';
                     str+=`<li>
-                    <a href="#">
+                    <a href="details.html?sid=${value.sid}">
                     <div class="cut">
                         每满1000<br>减100
                     </div>
@@ -42,7 +42,7 @@ define([], function () {
                         <p class="price text-overflow">¥${value.price}</p>
                     </div>
                     <div class="product-img">
-                        <img src="${value.img}" alt="">
+                        <img src="${value.img.split(',')[0]}" alt="">
                     </div>
                 </a>
                     </li>`;
@@ -50,7 +50,7 @@ define([], function () {
                     
                 }
                 $.each(data,function(index,value){
-                    if(value.sid>4 && value.sid<=8){
+                    if(value.sid>0 && value.sid<=4){
                         $oLi1+=draw(value);
                         $oUl.eq(0).html($oLi1);
                       
@@ -128,9 +128,79 @@ define([], function () {
                     $odiv.eq(4).html($oLi5);
                       
                     }                
-                });
-                
+                });               
             })
         })(),
+        brand:(function(){
+            $.ajax({
+                url:"http://10.31.162.91/mianshuiyigou/php/brand.php",
+                async:true,
+                dataType:"json"
+            }).done(function(data){
+                var $oUl=$('.brand-nav');
+                var $oLi1='';
+                var $oLi2='';
+                var $oLi3='';
+                var $oLi4='';
+                var $oLi5='';
+                var $oLi6='';
+                var $oLi7='';
+                var $oLi8='';
+                function draw(value){
+                    var str='';
+                    str+=`<li>
+                    <a href="#">
+                        <div class="big-brand-img">
+                            <img src="${value.img}" alt="">
+                            <span></span>
+                        </div>
+                        <div class="brand_name text-overflow">
+                        ${value.title}
+                        </div>
+                    </a>
+                </li>`;
+                    return str;
+                    
+                }
+                $.each(data,function(index,value){
+                    if(value.sid>0 && value.sid<=6){
+                        $oLi1+=draw(value);
+                        $oUl.eq(0).html($oLi1);
+                      
+                    }
+                    if(value.sid>6 && value.sid<=12){
+                        $oLi2+=draw(value);
+                        $oUl.eq(1).html($oLi2);
+                      
+                    }
+                    
+                    if(value.sid>12 && value.sid<=18){
+                        $oLi3+=draw(value);
+                        $oUl.eq(2).html($oLi3);
+                    }
+                    if(value.sid>4 && value.sid<=10){
+                        $oLi4+=draw(value);
+                        $oUl.eq(3).html($oLi4);
+                      
+                    }
+                    if(value.sid>10 && value.sid<=16){
+                        $oLi5+=draw(value);
+                        $oUl.eq(4).html($oLi5);                     
+                    }
+                    if(value.sid>0 && value.sid<=6){
+                        $oLi6+=draw(value);
+                        $oUl.eq(5).html($oLi6);                     
+                    } 
+                    if(value.sid>6 && value.sid<=12){
+                        $oLi7+=draw(value);
+                        $oUl.eq(6).html($oLi7);                     
+                    } 
+                    if(value.sid>12 && value.sid<=18){
+                        $oLi8+=draw(value);
+                        $oUl.eq(7).html($oLi8);                     
+                    }               
+                });                
+            })
+        })()
 	}
 });

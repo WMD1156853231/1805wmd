@@ -214,7 +214,7 @@
   display: none;
 }
 
-.shop-step-content, .right-cart-goods .cart-goods-content {
+.shop-step-content, .right-goods-cart .cart-goods-content {
   position: absolute;
   width: 280px;
   right: 0px;
@@ -222,7 +222,7 @@
   bottom: 0px;
   overflow: hidden;
 }
-.shop-step-content .overview, .right-cart-goods .cart-goods-content .overview {
+.shop-step-content .overview, .right-goods-cart .cart-goods-content .overview {
   position: absolute;
   left: 0;
   top: 0;
@@ -290,11 +290,14 @@
 }
 
 /*-------购物车--------*/
-.right-cart-goods .layer-body {
+.right-goods-cart {
+  display: none;
+}
+.right-goods-cart .layer-body {
   text-align: center;
   margin-top: 60px;
 }
-.right-cart-goods .layer-body span {
+.right-goods-cart .layer-body span {
   width: 80px;
   height: 80px;
   background-position: -24px -288px;
@@ -303,7 +306,7 @@
   background-repeat: no-repeat;
   background-image: url(https://snewww.mianshui365.com/assets/images/right-bar-icons.png);
 }
-.right-cart-goods .layer-body p {
+.right-goods-cart .layer-body p {
   font-size: 12px;
   color: #999;
   line-height: 18px;
