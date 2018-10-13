@@ -279,9 +279,15 @@
     }
     .sum{
         margin-top: 10px;
+        @include clearfix();
+        span{
+            float:left;
+        }
     }
     .reduce{
-        display: inline-block;
+        margin-top:5px;
+        float:left;
+        display: block;
         background-color: #ccc;
         opacity: 0.6;
         width: 28px;
@@ -289,12 +295,13 @@
         background: url(https://snewww.mianshui365.com/images/icon.png?t=1) 2px -320px no-repeat #fff;
         overflow: hidden;
         text-indent: -999px;
-        vertical-align: middle;
         border: 1px #bababa solid;
         border-right: 1px #dcdcdc solid;
     }
     .val{
-        display: inline-block;
+        float:left;
+        display: block;
+        margin-top:5px;
         padding: 0 5px;
         width: 50px;
         height: 23px;
@@ -302,12 +309,11 @@
         border: 1px #bababa solid;
         border-width: 1px 0;
         background-color: #fff;
-        vertical-align: middle;
         text-align: center;
         color: #303030;
+        outline:none;
     }
     .add{
-        display: inline-block;
         margin-right: 10px;
         @extend .reduce;
         background-position: -22px -320px;
@@ -398,7 +404,7 @@
         margin-right:5px;
     }
     /*--------------购物车--------------*/
-    .cart{
+    .cartadd{
         padding: 25px 0;
         @include clearfix();
     }

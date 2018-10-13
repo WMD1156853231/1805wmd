@@ -195,11 +195,11 @@ li{
         width:600px;
         height:34px;
         border: 3px solid #ff4a00;
-        overflow: hidden;
         text-align: right;
         font-size:0;
         .txt{
             vertical-align: top;
+            display:inline-block;
             input{
                 height: 24px;
                 padding: 5px 0;
@@ -222,7 +222,30 @@ li{
             font-size: 14px;
             display: inline-block;
         }
+        
     }
+    .search_ul{
+        position:absolute;
+        width:482px;
+        border:1px solid #dedede;
+        background:#fff;
+        left:-3px;
+        top:43px;
+        z-index:10;
+        display:none;
+        li{
+            width:480px;
+            font-size:12px;
+            line-height:20px;
+            text-align:left;
+            text-indent: 7px;
+            &:hover{
+                background:#f0f0f0;
+            }
+        }
+    }
+    
+    
 }
 /*----顶部---bot*/
 .header-bot{   

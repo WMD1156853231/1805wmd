@@ -1,8 +1,35 @@
 define([], function () {
 	return {
-		search:(function(){
-			$('.topcontent').load('header.html',function(){
-				
+		search: (function () {
+			$('.topcontent').load('header.html', function () {
+				var $search = $('#search-input');
+				$search.on('input', function () {
+					//https://ds.suning.cn/ds/his/new/-'+$(this).val()+'-0-1_0-jsonp123.jsonp
+					if ($(this).val() != '') {
+						$.ajax({
+							url: 'https://suggest.taobao.com/sug?code=utf-8&q=' + $(this).val() + '&_ksTS=1539310285839_393&callback=jsonp394',
+							dataType: 'jsonp'
+						}).done(function (data) {
+							var $oUl = $('.search .search_ul');
+							var $str = '';
+							$.each(data.result, function (index, value) {
+								$str += `<li>${value[0]}</li>`;
+								$oUl.html($str);
+
+							});							
+							$oUl.show();
+							$oUl.on('click','li',function(){
+								$search.val($(this).text());
+								$oUl.hide();
+							})											
+						});
+					} else {
+						$('.search .search_ul').hide();
+					}
+				})
+				// $().not('.search').on('click',function(){
+				// 	$('.search .search_ul').hide();
+				// })
 			});
 		})(),
 		aside: (function () {
@@ -16,8 +43,9 @@ define([], function () {
 					if ($gw.hasClass('bg-ff4a00') && $aside.css({ right: 0 })) {//如果有橙色背景同时侧边栏right值为0
 						$aside.animate({ right: -280 });//right值变为-280
 						$(this).removeClass('bg-ff4a00');//移除橙色背景
+						$('.right-shop-step').hide(1000);//右侧内容部分隐藏,给1秒的隐藏时间
 					} else {
-						$aside.animate({//否则right值变为-280，加上橙色背景
+						$aside.animate({//否则right值变为0，加上橙色背景
 							right: 0
 						})
 						$(this).addClass('bg-ff4a00');
@@ -36,6 +64,7 @@ define([], function () {
 					if ($cart.hasClass('bg-ff4a00') && $aside.css({ right: 0 })) {
 						$aside.animate({ right: -280 });
 						$(this).removeClass('bg-ff4a00');
+						$('.right-goods-cart').hide(1000);
 					} else {
 						$aside.animate({
 							right: 0
@@ -59,9 +88,9 @@ define([], function () {
 
 
 			});
-		}),
+		})(),
 		louti: (function () {
-			
+
 
 			$('.footercontent').load('footer.html');
 			/*-------------楼梯-----------------*/
@@ -102,12 +131,14 @@ define([], function () {
 			var index = 0;
 			var $timer = null;
 			$('.bullet li').on('mouseover', function () {
-				$('.next').show();
-				$('.prev').show();
+
 				$(this).addClass('current').siblings('.bullet li').removeClass('current');
 				$('.figure-img li').eq($(this).index()).stop(true).animate({ opacity: 1 }).siblings('.figure-img li').animate({ opacity: 0 });
 				index = $(this).index();
 			});
+			$timer = setInterval(function () {
+				$('.next').click();
+			}, 1000);
 			$('.figure').hover(function () {
 				$('.next').show();
 				$('.prev').show();
@@ -118,7 +149,7 @@ define([], function () {
 				clearInterval($timer);
 				$timer = setInterval(function () {
 					$('.next').click();
-				}, 1000)
+				}, 1000);
 			})
 			$('.next').on('click', function () {
 				index++;

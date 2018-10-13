@@ -137,6 +137,231 @@ body{
         font-weight: normal;
     }
 }
+/*-----------------cuxiao添加商品-----------*/
+.cuxiao{
+    margin-top: 10px;
+    width: 960px;
+    margin: 0 auto;
+    .full_reduce{
+        border-left: 5px solid #fe0100;
+        width: 954px;
+        height: 30px;
+        line-height: 30px;
+        border: solid 1px #eeeeee;
+        font-size: 12px;
+    }
+    .full_reduce_left{
+        width: 580px;
+        height: 30px;
+        color: #808080;
+        float: left;
+        margin-left: 10px;
+    }
+    .full_reduce_text{
+        margin-left: 5px;
+        color: #fff;
+        background: #fe0100;
+        padding: 3px;
+        border-radius: 2px;
+        margin-right: 10px;
+    }
+    .full_orange{
+        color: #ee761a;
+    }
+    .full_reduce_right{
+        color: #fc764d;
+        margin-right: 10px;
+        float: right;
+    }
+    .cuxiao_goods{
+        display: none;
+        width: 960px;
+        border-top: 0;
+    }
+    .goods-info{
+        @include clearfix();
+        background-color: #fff;
+        width: 960px;
+        border: solid 1px #eeeeee;
+        border-top: 0;
+        z-index: 6;
+    }
+    .left{
+        float:left;
+    }
+    .goods-checkbox{
+        text-align: center;
+        width: 30px;
+        line-height: 22px;
+        vertical-align: middle;
+        input{
+            margin-top:45px;
+            -webkit-appearance: none;
+            background: url(https://s1www.mianshui365.com/images/duigou_03.jpg) no-repeat;
+            height: 14px;
+            vertical-align: middle;
+            width: 14px;
+            margin-left: 20px;
+            border:0;
+            outline:none;
+        }
+        input[type="checkbox"]:checked{
+            background-position: -14px 0;
+            border: none;
+        }
+    }
+    .goods-img{
+        text-align: center;
+        width: 343px;
+        line-height: 20px;
+        font-size: 12px;
+        dl{
+            
+            width: 310px;
+            margin-left: 20px;
+        }
+        dd{
+            width: 105px;
+            float: left;
+            img{
+                width:100%;
+            }
+        }
+        
+        dt{
+            width: 184px;
+            text-align: left;
+            margin-top: 16px;
+            float: right;
+        }
+        p{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .color_333{
+            color:#333;
+        }
+        .color_888{
+            color:#888;
+        }
+    }
+    .goods-props{
+        margin-top:30px;
+        text-align: center;
+        width: 153px;
+        font-size: 12px;
+        p{
+            
+            width: 153px;
+            font-size: 12px;
+            line-height: 25px;
+            color: #808080;
+        }
+    }
+    .goods-price{
+        margin-top:35px;
+        text-align: center;
+        width: 208px;
+        font-size: 12px;
+        p{
+            
+            color: #fc764d;
+        }
+        .change-activity{
+            display: inline-block;
+            padding: 2px 5px;
+            cursor: pointer;
+            position: relative;
+            border: 1px solid #fc764d;
+            color: #fc764d;
+        }
+    }
+    .goods-price-sum{
+        display:none;
+    }
+    .goods-changenum{
+        padding-top:40px;
+        text-align: center;
+        width: 118px;
+        font-size: 12px;
+        .jiajia{
+            
+            @include clearfix();
+            border: solid 1px #eeeeee;
+            width: 87px;
+            height: 23px;
+            margin: 0 auto;
+        }
+        .num_reduce{
+            float:left;
+            width: 25px;
+            height: 23px;
+            overflow: hidden;
+            border-right: solid 1px #eeeeee;
+            display: block;
+            text-decoration: none;
+            color: #cccccc;
+            font-size: 20px;
+            line-height: 23px;
+        }
+        input{
+            float:left;
+            width: 33px;
+            height: 23px;
+            line-height: 23px;
+            text-align: center;
+            color: #303030;
+            display:block;
+            border: none;
+        }
+        .num_add{
+            float:left;
+            width: 25px;
+            height: 23px;
+            overflow: hidden;
+            border-left: solid 1px #eeeeee;
+            display: block;
+            text-decoration: none;
+            color: #cccccc;
+            font-size: 20px;
+            line-height: 23px;
+        }
+    }
+    .goods-action{
+        margin-top:25px;
+        text-align: center;
+        width: 100px;
+        font-size: 12px;
+        .goods-action_add{
+            background: url(https://s1www.mianshui365.com/images/lajixiang_03.jpg) no-repeat center left;
+            padding-left: 18px;
+            color: #333;
+            text-decoration: none;
+            height: 25px;
+            line-height: 25px;
+            display: inline-block;
+            &:hover{
+                background: url(https://s1www.mianshui365.com/images/shubjig_03.jpg) no-repeat 0 7px;
+                color: #fc764d;
+            }
+        }
+        .goods-action_del{
+            background: url(https://s1www.mianshui365.com/images/lajixiang_07.jpg) no-repeat center left;
+            padding-left: 18px;
+            color: #333;
+            text-decoration: none;
+            height: 25px;
+            line-height: 25px;
+            display: inline-block;
+            &:hover{
+                background: url(https://s1www.mianshui365.com/images/shubjig_07.jpg) no-repeat 1px 5px;
+                color: #fc764d;
+            }
+        }
+    }
+}
+
 /*---------------确认订单----------------------*/
 .buy-wrap{
     height: 60px;
@@ -177,7 +402,7 @@ body{
         border: none;
     }
 }
-.sum{
+.sum_1{
     width: 620px;
     float: left;   
     text-align: right;
@@ -188,15 +413,17 @@ body{
     }
     .cart-sum{
         line-height:30px;
+        em{
+            font-size: 16px;
+            font-style: normal;
+        }
+        span{
+            font-size: 24px;
+            color: #fc764d;
+        }
+
     }
-    em{
-        font-size: 16px;
-        font-style: normal;
-    }
-    span{
-        font-size: 24px;
-        color: #fc764d;
-    }
+    
 }
 .buy-right{
     float: right;

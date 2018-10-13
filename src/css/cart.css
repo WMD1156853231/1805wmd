@@ -185,12 +185,12 @@ li {
   width: 600px;
   height: 34px;
   border: 3px solid #ff4a00;
-  overflow: hidden;
   text-align: right;
   font-size: 0;
 }
 .header-middle .search .txt {
   vertical-align: top;
+  display: inline-block;
 }
 .header-middle .search .txt input {
   height: 24px;
@@ -212,6 +212,26 @@ li {
   background-color: #ff4a00;
   font-size: 14px;
   display: inline-block;
+}
+.header-middle .search_ul {
+  position: absolute;
+  width: 482px;
+  border: 1px solid #dedede;
+  background: #fff;
+  left: -3px;
+  top: 43px;
+  z-index: 10;
+  display: none;
+}
+.header-middle .search_ul li {
+  width: 480px;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: left;
+  text-indent: 7px;
+}
+.header-middle .search_ul li:hover {
+  background: #f0f0f0;
 }
 
 /*----顶部---bot*/
@@ -786,6 +806,234 @@ body {
   font-weight: normal;
 }
 
+/*-----------------cuxiao添加商品-----------*/
+.cuxiao {
+  margin-top: 10px;
+  width: 960px;
+  margin: 0 auto;
+}
+.cuxiao .full_reduce {
+  border-left: 5px solid #fe0100;
+  width: 954px;
+  height: 30px;
+  line-height: 30px;
+  border: solid 1px #eeeeee;
+  font-size: 12px;
+}
+.cuxiao .full_reduce_left {
+  width: 580px;
+  height: 30px;
+  color: #808080;
+  float: left;
+  margin-left: 10px;
+}
+.cuxiao .full_reduce_text {
+  margin-left: 5px;
+  color: #fff;
+  background: #fe0100;
+  padding: 3px;
+  border-radius: 2px;
+  margin-right: 10px;
+}
+.cuxiao .full_orange {
+  color: #ee761a;
+}
+.cuxiao .full_reduce_right {
+  color: #fc764d;
+  margin-right: 10px;
+  float: right;
+}
+.cuxiao .cuxiao_goods {
+  display: none;
+  width: 960px;
+  border-top: 0;
+}
+.cuxiao .goods-info {
+  background-color: #fff;
+  width: 960px;
+  border: solid 1px #eeeeee;
+  border-top: 0;
+  z-index: 6;
+}
+.cuxiao .goods-info:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.cuxiao .left {
+  float: left;
+}
+.cuxiao .goods-checkbox {
+  text-align: center;
+  width: 30px;
+  line-height: 22px;
+  vertical-align: middle;
+}
+.cuxiao .goods-checkbox input {
+  margin-top: 45px;
+  -webkit-appearance: none;
+  background: url(https://s1www.mianshui365.com/images/duigou_03.jpg) no-repeat;
+  height: 14px;
+  vertical-align: middle;
+  width: 14px;
+  margin-left: 20px;
+  border: 0;
+  outline: none;
+}
+.cuxiao .goods-checkbox input[type="checkbox"]:checked {
+  background-position: -14px 0;
+  border: none;
+}
+.cuxiao .goods-img {
+  text-align: center;
+  width: 343px;
+  line-height: 20px;
+  font-size: 12px;
+}
+.cuxiao .goods-img dl {
+  width: 310px;
+  margin-left: 20px;
+}
+.cuxiao .goods-img dd {
+  width: 105px;
+  float: left;
+}
+.cuxiao .goods-img dd img {
+  width: 100%;
+}
+.cuxiao .goods-img dt {
+  width: 184px;
+  text-align: left;
+  margin-top: 16px;
+  float: right;
+}
+.cuxiao .goods-img p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.cuxiao .goods-img .color_333 {
+  color: #333;
+}
+.cuxiao .goods-img .color_888 {
+  color: #888;
+}
+.cuxiao .goods-props {
+  margin-top: 30px;
+  text-align: center;
+  width: 153px;
+  font-size: 12px;
+}
+.cuxiao .goods-props p {
+  width: 153px;
+  font-size: 12px;
+  line-height: 25px;
+  color: #808080;
+}
+.cuxiao .goods-price {
+  margin-top: 35px;
+  text-align: center;
+  width: 208px;
+  font-size: 12px;
+}
+.cuxiao .goods-price p {
+  color: #fc764d;
+}
+.cuxiao .goods-price .change-activity {
+  display: inline-block;
+  padding: 2px 5px;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid #fc764d;
+  color: #fc764d;
+}
+.cuxiao .goods-price-sum {
+  display: none;
+}
+.cuxiao .goods-changenum {
+  padding-top: 40px;
+  text-align: center;
+  width: 118px;
+  font-size: 12px;
+}
+.cuxiao .goods-changenum .jiajia {
+  border: solid 1px #eeeeee;
+  width: 87px;
+  height: 23px;
+  margin: 0 auto;
+}
+.cuxiao .goods-changenum .jiajia:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.cuxiao .goods-changenum .num_reduce {
+  float: left;
+  width: 25px;
+  height: 23px;
+  overflow: hidden;
+  border-right: solid 1px #eeeeee;
+  display: block;
+  text-decoration: none;
+  color: #cccccc;
+  font-size: 20px;
+  line-height: 23px;
+}
+.cuxiao .goods-changenum input {
+  float: left;
+  width: 33px;
+  height: 23px;
+  line-height: 23px;
+  text-align: center;
+  color: #303030;
+  display: block;
+  border: none;
+}
+.cuxiao .goods-changenum .num_add {
+  float: left;
+  width: 25px;
+  height: 23px;
+  overflow: hidden;
+  border-left: solid 1px #eeeeee;
+  display: block;
+  text-decoration: none;
+  color: #cccccc;
+  font-size: 20px;
+  line-height: 23px;
+}
+.cuxiao .goods-action {
+  margin-top: 25px;
+  text-align: center;
+  width: 100px;
+  font-size: 12px;
+}
+.cuxiao .goods-action .goods-action_add {
+  background: url(https://s1www.mianshui365.com/images/lajixiang_03.jpg) no-repeat center left;
+  padding-left: 18px;
+  color: #333;
+  text-decoration: none;
+  height: 25px;
+  line-height: 25px;
+  display: inline-block;
+}
+.cuxiao .goods-action .goods-action_add:hover {
+  background: url(https://s1www.mianshui365.com/images/shubjig_03.jpg) no-repeat 0 7px;
+  color: #fc764d;
+}
+.cuxiao .goods-action .goods-action_del {
+  background: url(https://s1www.mianshui365.com/images/lajixiang_07.jpg) no-repeat center left;
+  padding-left: 18px;
+  color: #333;
+  text-decoration: none;
+  height: 25px;
+  line-height: 25px;
+  display: inline-block;
+}
+.cuxiao .goods-action .goods-action_del:hover {
+  background: url(https://s1www.mianshui365.com/images/shubjig_07.jpg) no-repeat 1px 5px;
+  color: #fc764d;
+}
+
 /*---------------确认订单----------------------*/
 .buy-wrap {
   height: 60px;
@@ -834,24 +1082,24 @@ body {
   border: none;
 }
 
-.sum {
+.sum_1 {
   width: 620px;
   float: left;
   text-align: right;
 }
-.sum .sumpro {
+.sum_1 .sumpro {
   font-size: 12px;
   color: #666666;
   line-height: 26px;
 }
-.sum .cart-sum {
+.sum_1 .cart-sum {
   line-height: 30px;
 }
-.sum em {
+.sum_1 .cart-sum em {
   font-size: 16px;
   font-style: normal;
 }
-.sum span {
+.sum_1 .cart-sum span {
   font-size: 24px;
   color: #fc764d;
 }

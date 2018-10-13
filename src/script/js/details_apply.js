@@ -84,7 +84,17 @@ define([], function () {
 					</li>					
 					`;
                 
-                $oUl.html($str);
+				$oUl.html($str);
+			//选择
+            }).done(function(data){
+                var $oSpan=$('.main-content-right .change .size');
+                var $str='';               
+                    $str+=
+                        `
+						${data[0].choose}
+						<em class="ok"></em>				
+					`;
+				$oSpan.html($str);
             })
 		})()
 	}
