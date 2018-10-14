@@ -304,6 +304,9 @@ body{
             color: #cccccc;
             font-size: 20px;
             line-height: 23px;
+            &:hover{
+                color:#4e4e4e;
+            }
         }
         input{
             float:left;
@@ -326,6 +329,9 @@ body{
             color: #cccccc;
             font-size: 20px;
             line-height: 23px;
+            &:hover{
+                color:#4e4e4e;
+            }
         }
     }
     .goods-action{

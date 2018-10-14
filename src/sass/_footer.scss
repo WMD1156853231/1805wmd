@@ -169,10 +169,12 @@ body{
         margin:0 auto;
     }
     .footer-believe{
-        margin-top: 35px;
+        margin: 35px 0 0 280px;
         text-align: center;
         span{
             padding:0 30px;
+            display:block;
+            float:left;
         }
     }
 }

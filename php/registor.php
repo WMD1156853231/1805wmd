@@ -22,6 +22,6 @@
         $password=md5($_POST['password']);
         $phone=$_POST['mobile_phone'];
         mysql_query("insert login values(null,'$user','$password','$phone')");
-        header('location:http://10.31.162.91/mianshuiyigou/src/index.html');
+        header('location:http://10.31.162.91/mianshuiyigou/src/login.html');
     }
 ?>

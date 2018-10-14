@@ -3,7 +3,6 @@ $top_left-height:30px;
 $wrapper-width:1200px;
 $bg-f2f2f2:#f2f2f2;
 $color-666:#666;
-$width:100%;
 html,body{
     height:100%;
 }
@@ -11,9 +10,7 @@ html,body{
 body{
     width:1489.2px;
 }
-*{
-    margin:0;padding:0;
-}
+
 @mixin clearfix() {
     &:after {
     content: " "; 
@@ -22,12 +19,9 @@ body{
     }
 }
 a{
-    text-decoration: none;
     color:$color-666;
 }
-li{
-    list-style:none;
-}
+
 /*----顶部---top*/
 .header-top{
     height:$top_left-height;
@@ -59,7 +53,13 @@ li{
             &:hover{
                 color:orangered;
             }
-        }         
+        }
+        .wel{
+            display:none;
+            .wel_esc:hover{
+                color:orangered;
+            }
+        }        
     }
 /*顶部----个人中心--------*/
     .user-content{
@@ -385,11 +385,11 @@ li{
     }
     .item{
         position: relative;
-        &:hover{
-            .sub-nav-right{
-                display:block;
-            }
-        }
+        // &:hover{
+        //     .sub-nav-right{
+        //         display:block;
+        //     }
+        // }
         >span{
             position: absolute;
             left: 60px;

@@ -16,12 +16,12 @@ define([], function () {
 								$str += `<li>${value[0]}</li>`;
 								$oUl.html($str);
 
-							});							
+							});
 							$oUl.show();
-							$oUl.on('click','li',function(){
+							$oUl.on('click', 'li', function () {
 								$search.val($(this).text());
 								$oUl.hide();
-							})											
+							})
 						});
 					} else {
 						$('.search .search_ul').hide();
@@ -30,8 +30,55 @@ define([], function () {
 				// $().not('.search').on('click',function(){
 				// 	$('.search .search_ul').hide();
 				// })
+				//二级导航
+				var $oSub = $('.sub-nav-right');
+				var $oLi = $('.sub-li');
+				$oLi.hover(function () {
+					$oSub.css({
+						display: 'block'
+					})
+				}, function () {
+					$oSub.css({
+						display: 'none'
+					})
+				})
+				
+
+				//欢迎XXXX登陆
+				function addCookie(key,value,day){
+					var date=new Date();//创建日期对象
+					date.setDate(date.getDate()+day);//过期时间：获取当前的日期+天数，设置给date
+					document.cookie=key+'='+encodeURI(value)+';expires='+date;//添加cookie，设置过期时间
+				}
+				function getcookie(key) {
+					var str = decodeURI(document.cookie);
+					var arr = str.split('; ');
+					for (var i = 0; i < arr.length; i++) {
+						var arr1 = arr[i].split('=');
+						if (arr1[0] == key) {
+							return arr1[1];
+						}
+					}
+				}
+				function delcookie(key) {
+					addcookie(key, '', -1); //添加的函数,将时间设置为过去时间
+				}
+				var $top_login=$('.top_right .login');
+				var $top_close=$('.top_right .register')
+				if(getcookie('UserName')){
+					$('.login_reg').css({display:'none'});
+					$('.wel').css({display:'inline-block'});
+					$('.wel_login').html('欢迎,'+getcookie('UserName'));
+					$('.wel_esc').on('click',function(){
+						$('.login_reg').css({display:'inline-block'});
+						$('.wel').css({display:'none'});
+						delcookie('UserName');
+					})
+				}
+
 			});
 		})(),
+
 		aside: (function () {
 			$('.asidecontent').load('aside.html', function () {
 				//侧边栏进出效果
@@ -171,6 +218,38 @@ define([], function () {
 			});
 
 		})(),
+		//顶部悬浮
+		top_suspension: !function () {
+			var $oHot = $('.hot-tab ul');
+			var $oA = $('.hot-tab a');
+			var $hottop = $oHot.offset().top;
+			$(window).on('scroll', function () {
+				var $scrolltop = $(window).scrollTop();//获取滚动条的top值				
+				//当滚动条的top值等于免税热卖的top值时，顶部悬浮
+				if ($scrolltop >= $hottop) {
+					$oHot.css({
+						position: 'fixed',
+						zIndex: 999,
+						top: 0
+					});
+				}
+				//当滚动条的top值小于免税热卖的top值时，恢复
+				if ($scrolltop <= 3585) {
+					$oHot.css({
+						position: 'relative'
+					})
+				}
+
+			});
+			//点击a时，跳到免税热卖
+			$oA.each(function () {
+				$(this).on('click', function () {
+					$('html,body').animate({
+						scrollTop: 3585
+					}, 0)
+				})
+			})
+		}(),
 		hot_tab: (function () {
 			$('.hot-tab li').on('click', function () {
 				$(this).addClass('check').siblings('.hot-tab li').removeClass('check');
@@ -188,5 +267,6 @@ define([], function () {
 			tab('.three');
 			tab('.four');
 		})()
+
 	}
 });

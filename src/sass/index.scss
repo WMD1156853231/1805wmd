@@ -370,6 +370,8 @@
     height: 53px;
     ul{
         @include clearfix();
+        background:#fff;
+        position: relative;
         width: 1199px;
         margin: 0 auto;
         font-size: 0;

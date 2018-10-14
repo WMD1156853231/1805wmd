@@ -1,0 +1,1 @@
+require(['login_effect']);

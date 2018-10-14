@@ -27,29 +27,6 @@ define([], function () {
                 addCookie(key, '', -1);//添加的函数,将时间设置为过去时间
             }
 
-            //1.将推荐商品的数据渲染出来。
-            // $.ajax({
-            //     url: 'json/cart.json',//推荐商品数据的接口
-            //     dataType: 'json'//数据的类型
-            // }).done(function (data) {//data:接口的返回的数据
-            //     var $html = '';
-            //     for (var i = 0; i < 4; i++) {
-            //         $html += '<li>' +
-            //             '<div class="goodsinfo">' +
-            //             '<div class="p-img">' +
-            //             '<a href="##"><img class="loadimg" src="' + data[i].img + '" alt="" sid="' + data[i].sid + '" /></a>' +
-            //             '</div>' +
-            //             '<div class="p-name">' +
-            //             '<a class="loadt" href="##">' + data[i].title + '</a>' +
-            //             '</div>' +
-            //             '<div class="p-price"><strong><em>￥</em><i class="loadpcp">' + data[i].price + '</i></strong></div>' +
-            //             '<div class="p-btn"><a href="javascript:void(0)"><b></b>加入购物车</a></div>' +
-            //             '</div>' +
-            //             '</li>';
-            //     }
-            //     $('.goods-list ul').html($html);//将数据追加到商品列表
-            // });
-
             //2.根据cookie值，创建一个商品列表的函数
             function createcart(sid, num) {//sid：图片的编号  num:商品的数量
                 $.ajax({
@@ -60,7 +37,7 @@ define([], function () {
                         if (sid == data[i].sid) {//图片的sid和数据里面的sid匹配
                             var $clone = $('.cuxiao_goods:hidden').clone(true);//对隐藏的模块进行克隆
                             //都是赋值
-                            $clone.find('.goods-img').find('dl').find('img').attr('src', data[i].img);
+                            $clone.find('.goods-img').find('dl').find('img').attr('src', data[i].img.split(',')[0]);
                             $clone.find('.goods-img').find('dl').find('img').attr('sid', data[i].sid);
                             $clone.find('.goods-img').find('dt').find('.color_333').html(data[i].fulltitle);
                             $clone.find('.goods-img').find('dt').find('.title_dis').html(data[i].discription);
@@ -90,37 +67,7 @@ define([], function () {
                 if (getCookie('cartnum')) {
                     numarr = getCookie('cartnum').split(',');
                 }
-            }
-
-
-            // $('.goods-list ul').on('click', '.p-btn a', function () {//委托，点击购物车按钮
-            //     var sid = $(this).parents('.goodsinfo').find('.loadimg').attr('sid');//当前按钮对应图片的sid
-            //     cookieToArray();//获取cookie值，放到对应的数组中
-            //     if ($.inArray(sid, sidarr) != -1) {//存在，数量加1
-            //         $('.goods-item:visible').each(function () {//遍历可视的商品列表
-            //             if (sid == $(this).find('img').attr('sid')) {//添加购物车按钮的索引和购物车中商品列表的索引一致
-            //                 var $num = $(this).find('.quantity-form input').val();//获取数量的值
-            //                 $num++;//数量累加
-            //                 $(this).find('.quantity-form input').val($num);//将数量赋值回去
-            //                 //计算价格
-            //                 var $dj = parseFloat($(this).find('.b-price strong').html());//获取当前的单价
-            //                 $(this).find('.b-sum strong').html(($dj * $num).toFixed(2));//计算商品总价
-
-            //                 //存储数量到cookie里面。通过编号找数量
-            //                 numarr[$.inArray(sid, sidarr)] = $num;//将数量存储到对应的cookie存放数量的数组中
-            //                 addCookie('cartnum', numarr.toString(), 7);//添加购物车
-            //                 totalprice();
-            //             }
-            //         });
-            //     } else {//当前商品列表没有进入购物车，创建商品列表
-            //         sidarr.push(sid);//将当前id添加到数组里面。
-            //         addCookie('cartsid', sidarr.toString(), 7);//将整个数组添加到cookie
-            //         numarr.push(1);//走这里数量都是1.
-            //         addCookie('cartnum', numarr.toString(), 7);
-            //         createcart(sid, 1);
-            //         totalprice();
-            //     }
-            // });
+            }          
 
             //3.页面加载检测购物车(cookie里面)是否有数据，有的话创建商品列表
             if (getCookie('cartsid') && getCookie('cartnum')) {
@@ -154,6 +101,8 @@ define([], function () {
                     }
                 });
                 //赋值
+                $('.buy-left .sumpro').html('总价￥' + total.toFixed(2));
+                $('.full_reduce_right').html('小计：￥' + total.toFixed(2));
                 $('.buy-left .cart-sum span').html('￥' + total.toFixed(2));
                 // $('.amount-sum em').html(countnum);
             }
@@ -241,6 +190,14 @@ define([], function () {
                 }
                 totalprice();
             });
+            var $byRt=$('.buy-right a');
+            // if($('.cuxiao_goods:visible').find('.goods-checkbox').has('input:checked')){
+            //     console.log(1)
+            //     $byRt.css({
+            //         background: '#fc805a',
+            //         cursor: 'pointer'
+            //     })
+            // }
 
 
             //10.删除
@@ -267,20 +224,6 @@ define([], function () {
                 delgoodslist($(this).first().parents('.cuxiao_goods').find('img').attr('sid'), sidarr);
                 totalprice();
             });
-
-
-            //删除全部商品的函数
-            // $('.operation a:first').on('click', function () {
-            //     $('.goods-item:visible').each(function () {
-            //         if ($(this).find('input:checkbox').is(':checked')) {
-            //             $(this).remove();
-            //             delgoodslist($(this).find('img').attr('sid'), sidarr);
-            //         }
-            //     });
-            //     totalprice();
-            // });
-
-
 
 
         })()

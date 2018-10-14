@@ -7,18 +7,8 @@ body {
   width: 1489.2px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 a {
-  text-decoration: none;
   color: #666;
-}
-
-li {
-  list-style: none;
 }
 
 /*----顶部---top*/
@@ -55,6 +45,12 @@ li {
   margin-left: 10px;
 }
 .header-top .top_right .top-text:hover {
+  color: orangered;
+}
+.header-top .top_right .wel {
+  display: none;
+}
+.header-top .top_right .wel .wel_esc:hover {
   color: orangered;
 }
 .header-top .user-content, .header-top .member-content, .header-top .kf-content, .header-top .download-content {
@@ -372,9 +368,6 @@ li {
 .nav_all .item {
   position: relative;
 }
-.nav_all .item:hover .sub-nav-right {
-  display: block;
-}
 .nav_all .item > span {
   position: absolute;
   left: 60px;
@@ -655,11 +648,13 @@ body {
   margin: 0 auto;
 }
 .footer .footer-believe {
-  margin-top: 35px;
+  margin: 35px 0 0 280px;
   text-align: center;
 }
 .footer .footer-believe span {
   padding: 0 30px;
+  display: block;
+  float: left;
 }
 
 body {
@@ -979,6 +974,9 @@ body {
   font-size: 20px;
   line-height: 23px;
 }
+.cuxiao .goods-changenum .num_reduce:hover {
+  color: #4e4e4e;
+}
 .cuxiao .goods-changenum input {
   float: left;
   width: 33px;
@@ -1000,6 +998,9 @@ body {
   color: #cccccc;
   font-size: 20px;
   line-height: 23px;
+}
+.cuxiao .goods-changenum .num_add:hover {
+  color: #4e4e4e;
 }
 .cuxiao .goods-action {
   margin-top: 25px;

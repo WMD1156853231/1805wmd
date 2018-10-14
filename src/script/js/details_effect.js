@@ -86,6 +86,37 @@ define([], function () {
             //     }
             // });
         })(),
+        go_cart:!function(){
+            var $addCart=$('#addcart');
+            var $oGo=$('#go-cart');
+            var $mask=$('#mask');
+            var $continue=$('.go-continue');
+            var $goCart=$('.go-cart');
+            $addCart.on('click',function(){
+                $oGo.css({
+                    display:'block'
+                })
+                $mask.css({
+                    display:'block'
+                })
+            })
+            $continue.on('click',function(){
+                $oGo.css({
+                    display:'none'
+                })
+                $mask.css({
+                    display:'none'
+                })
+            })
+            $goCart.on('click',function(){
+                $oGo.css({
+                    display:'none'
+                })
+                $mask.css({
+                    display:'none'
+                })
+            })
+        }(),
         cookie: (function () {
             // 1.通过详情页添加商品加入购物车，通过购物车页面下面的推荐商品加入购物车。
             //思路：通过详情页将商品的编号和商品的数量存放到cookie里面，利用数组（多个商品）。
